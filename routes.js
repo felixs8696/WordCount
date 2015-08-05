@@ -1,10 +1,12 @@
-angular.module("felixsu")
-  .config(function($stateProvider, $urlRouterProvider){
+angular
+  .module("felixsu")
+  .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
+    console.log('hihihi');
     $stateProvider
       .state("index", {
         url: "/",
-        templateUrl: "WordCount.html",
-        controller: "WordCountCtrl as vm",
+        templateUrl: "index.html",
+        controller: "WordCountCtrl as vm"
       });
     $urlRouterProvider.otherwise("/");
-  });
+  }]);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div class="container">
+    <h2 class="headline">Multi Counter</h2>
+    <div class="right-align">
+        <button ng-click="vm.addToList()" class="plus-minus"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+    <div class="count-block">
+        {{1+2}}
+        {{vm.itemList}}
+        <div class="full-width" ng-repeat="item in vm.itemList">
+            <div class="text-container padding">
+                <textarea rows = "1" name="prompts" placeholder="Prompt..."></textarea>
+                <textarea rows = "6" name="textFields" placeholder="Enter response Here..."></textarea>
+            </div>
+            <div class="word-count padding">
+                <p >Characters: <span id ="CharCount" name = "cc"></span></p>
+                <p >Words: <span id="WordCount" name = "wc"> </span></p>
+                <p >Paragraphs: <span id="ParaCount" name = "pc"> </span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

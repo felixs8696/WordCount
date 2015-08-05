@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <!-- css -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/page.css">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-    <!-- angular -->
-    <script src="lib/angular/angular.js"></script>
-</head>
-<body>
-    <div class="container">
-        <h2 class="headline">Multi Counter</h2>
-        <div class="right-align">
-            <button ng-click="vm.addToList()" class="plus-minus"><span class="glyphicon glyphicon-plus"></span></button>
-        </div>
-        <div class="count-block">
-            {{vm.itemList}}
-            <div class="full-width" ng-repeat="item in vm.itemList">
-                <div class="text-container padding">
-                    <textarea rows = "1" name="prompts" placeholder="Prompt..."></textarea>
-                    <textarea rows = "6" name="textFields" placeholder="Enter response Here..."></textarea>
-                </div>
-                <div class="word-count padding">
-                    <p >Characters: <span id ="CharCount" name = "cc"></span></p>
-                    <p >Words: <span id="WordCount" name = "wc"> </span></p>
-                    <p >Paragraphs: <span id="ParaCount" name = "pc"> </span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+        <!-- css -->
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/page.css">
+
+        <!-- angular -->
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular-route/angular-route.js"></script>
+
+        <!-- wordcount -->
+        <script src="WordCount.js"></script>
+        <script src="routes.js"></script>
+        <script src="word-count.controller.js"></script>
+    </head>
+    <body ng-app="felixsu">
+        <!--<div class="container">-->
+            <!--<h2 class="headline">Multi Counter</h2>-->
+            <!--<div class="right-align">-->
+                <!--<button ng-click="vm.addToList()" class="plus-minus"><span class="glyphicon glyphicon-plus"></span></button>-->
+            <!--</div>-->
+            <!--<div class="count-block">-->
+                <!--{{1+2}}-->
+                <!--{{vm.itemList}}-->
+                <!--<div class="full-width" ng-repeat="item in vm.itemList">-->
+                    <!--<div class="text-container padding">-->
+                        <!--<textarea rows = "1" name="prompts" placeholder="Prompt..."></textarea>-->
+                        <!--<textarea rows = "6" name="textFields" placeholder="Enter response Here..."></textarea>-->
+                    <!--</div>-->
+                    <!--<div class="word-count padding">-->
+                        <!--<p >Characters: <span id ="CharCount" name = "cc"></span></p>-->
+                        <!--<p >Words: <span id="WordCount" name = "wc"> </span></p>-->
+                        <!--<p >Paragraphs: <span id="ParaCount" name = "pc"> </span></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </body>
 </html>
