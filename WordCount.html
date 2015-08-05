@@ -1,100 +1,33 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-	<link href="style.css" rel = "stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/page.css">
 
-	<!-- <link href="bootstrap.css" rel = "stylesheet"> -->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<script type="text/javascript" src = "WordCount.js"></script>
-	<link rel="shortcut icon" type="image/x-icon" href="../images/fslogo1.png" sizes="16x16 24x24 32x32 48x48" />
-	<link rel="icon" type="image/x-icon" href="../images/fslogo1.png" sizes="16x16 24x24 32x32 48x48" />
+    <!-- angular -->
+    <script src="lib/angular/angular.js"></script>
 </head>
 <body>
-	<script type='text/javascript' src='/JavaScriptSpellCheck/include.js' ></script>
-	<script type='text/javascript'>$Spelling.SpellCheckAsYouType('myfield')</script>
-	<div class = "container" style="background-color: #297eca">
-		<div id="temp-holder" class = "nTrow" style= "padding: 20px ">
-			<div class = "col-lg-9" style="text-align:left;">
-				<textarea rows = "1" cols = "115" name="prompts" style="margin: 0px 0px 0px 20px;" placeholder="Prompt"></textarea>
-			</div>
-			<div class = "col-lg-9" style="text-align:left;">
-				<textarea rows = "10" cols = "115" name="textFields" style="margin: 20px;" placeholder="Enter Response Here..."></textarea>
-			</div>
-			<div class = "col-lg-2">
-				<div id= "entry">
-					<p style= "color: #FFFFFF">Characters Typed: <span id ="CharCount" name = "cc"></span></p>
-					<p style= "color: #FFFFFF">Word Count: <span id="WordCount" name = "wc"> </span></p>
-					<p style= "color: #FFFFFF">Paragraph Count: <span id="ParaCount" name = "pc"> </span></p>
-				</div>
-<!-- 				<button id="save" onclick="save(textbox0)" >Save</button>
-				<button id="revert" onclick="revert(textbox0)" >Revert</button> -->
-			</div>
-		</div>
-		<div class = "nTrow" style= "padding: 10px;">
-			<button id = "save" onclick="saveEntry();">Add Field</button>
-			<button id="create" onclick="createFile()" >Create File</button>
-			<a download="MultiCount.txt" id="downloadlink" style="display: none; color: #90FFFF;">MultiCount.txt</a>
-<!-- 			<button id = "addSave" onclick="addToSave();">Add to Save</button>
-			<button id="test" onclick="printText()" >Test</button> -->
-		</div>
-<!-- 		<div id = "testing">
-		</div> -->
-		<!-- <a id='testing' onload="createFile();"></a> -->
-	</div>
- 
-<script type='text/javascript'>
-function CharacterCount(textArea,result){
-	var area=document.getElementsByName(textArea);
-	var c = document.getElementsByName(result);
-	if(!area || !c){return false}; // catches errors
-	for (var i = 0; i < c.length; i++) {
-		var count =   area[i].value.length
-		c[i].innerHTML = count;
-	}
-}
- 
-setInterval(function(){CharacterCount('textFields','cc')},55);
-</script>
-<script type='text/javascript'>
-var count = 0;
-function wordCount(textArea,result){
-	var area=document.getElementsByName(textArea);
-	var c = document.getElementsByName(result);
-	for (var i = 0; i < c.length; i++) {
-		var text = area[i].value;
-		var spaced = text.replace(/\s/g,' ');
-		spaced = spaced.split(' ');
-		for (j = 0; j < spaced.length; j++) {
-			if (spaced[j].length > 0) {
-				count ++;
-			}
-		}
-		c[i].innerHTML = count;
-		count = 0;
-	}
-	// count = 0;
-}
-setInterval(function(){wordCount('textFields','wc')},55);
-</script>
-<script type='text/javascript'>
-var count = 0;
-function paraCount(textArea,result){
-	var area=document.getElementsByName(textArea);
-	var c = document.getElementsByName(result);
-	for (var i = 0; i < c.length; i++) {
-		var text = area[i].value;
-		var spaced = text.split("\n");
-		for (j = 0; j < spaced.length; j++) {
-			if (spaced[j].length > 0) {
-				count ++;
-			}
-		}
-		c[i].innerHTML = count;
-		count = 0;
-	}
-}
-setInterval(function(){paraCount('textFields','pc')},55);
-</script>
-
+    <div class="container">
+        <h2 class="headline">Multi Counter</h2>
+        <div class="right-align">
+            <button ng-click="vm.addToList()" class="plus-minus"><span class="glyphicon glyphicon-plus"></span></button>
+        </div>
+        <div class="count-block">
+            {{vm.itemList}}
+            <div class="full-width" ng-repeat="item in vm.itemList">
+                <div class="text-container padding">
+                    <textarea rows = "1" name="prompts" placeholder="Prompt..."></textarea>
+                    <textarea rows = "6" name="textFields" placeholder="Enter response Here..."></textarea>
+                </div>
+                <div class="word-count padding">
+                    <p >Characters: <span id ="CharCount" name = "cc"></span></p>
+                    <p >Words: <span id="WordCount" name = "wc"> </span></p>
+                    <p >Paragraphs: <span id="ParaCount" name = "pc"> </span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

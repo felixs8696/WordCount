@@ -1,0 +1,22 @@
+{
+  "name": "WordCount",
+  "main": "WordCount.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/felixs8696/WordCount",
+  "authors": [
+    "felixs8696 <felixs8696@berkeley.edu>"
+  ],
+  "description": "Counts multi text boxes for words",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3"
+  }
+}

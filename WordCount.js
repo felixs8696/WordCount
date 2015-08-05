@@ -1,3 +1,14 @@
+// Ionic Starter App
+
+// angular.module is a global place for creating, registering and retrieving Angular modules
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// the 2nd parameter is an array of 'requires'
+
+angular.module('felixsu',[])
+	.run(function() {
+	});
+
+
 function createFile() {
 	var textFile = null,
 	  makeTextFile = function (text) {
@@ -42,23 +53,6 @@ function createFile() {
 	  }, false);
 }
 
-// function saveSnap() {
-// 	textboxes = document.getElementsByName('textFields');
-// 	var txt = "";
-// 	var count = 1;
-// 	for (var i = 0; i < textboxes.length; i++) {
-// 		txt += count + "\n";
-// 		txt += textboxes[i].value;
-// 		txt += "\n\n";
-// 		count++;
-// 	}
-// }
-
-// var text = {};
-// var testingText = "hi";
-// var tfCount = 0;
-// var recentElemID = "textbox" + tfCount;
-
 var code =  '<div class = "col-lg-9" style="text-align:left;">' +
 				'<textarea rows = "1" cols = "100" name="prompts" style="margin: 0px 0px 0px 20px;" placeholder="Prompt"></textarea>' +
 			'</div>' +
@@ -97,39 +91,3 @@ function saveEntry(){
 		}
 	}
 }
-// function addToSave() {
-// 	var elements = document.getElementsByName('textFields');
-// 	var element = elements[tfCount];
-// 	element.id = "textbox" + tfCount;
-// 	recentElemID = "textbox" + tfCount;
-// 	// testingText += "||||";
-// 	text[element.id] = element.value;
-// 	tfCount++;
-// }
-
-// function printText() {
-// 	var test = document.getElementById("testing");
-// 	var testText;
-// 	for (var key in text) {
-// 		if (text.hasOwnProperty(key)) {
-// 			testText += key;
-// 		}
-// 	}
-// 	test.innerHTML = testText + ": " + text[testText] + "\n";
-// }
-
-// function save(elementID) {
-// 	var element = document.getElementById(elementID);
-// 	var t = element.value;
-// 	if (typeof t != "undefined") {
-// 		text[elementID] = t;
-// 	}
-// 	else {
-// 		text[elementID] = "";
-// 	}
-// 	// text[text.length] = element.value;
-// }
-// function revert(elementID) {
-// 	var element = document.getElementById(elementID);
-// 	element.value = text[elementID];
-// }

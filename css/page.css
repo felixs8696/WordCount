@@ -1,0 +1,146 @@
+body {
+    background-color: #F4F4F4;
+    color: #666666;
+    font-size: 0.9em;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    line-height: 2.2;
+    margin: 0 auto 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333333;
+    font-size: 2em;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -1.2px;
+    line-height: 1.4;
+    text-transform: none;
+    margin: 4px 0 4px 0;
+    padding: 4px 0 4px 0;
+}
+
+p {
+    font-size: 2em;
+}
+
+.jumbotron {
+    background-image: url('../images/Jumbotron.jpg');
+    padding: 20px;
+    margin: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.jumbotron .masthead {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 48px 0;
+}
+
+.site-description {
+    display: block;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    text-transform: none;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 980px;
+    min-width: 727px;
+    margin: 0 auto;
+    zoom: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+.count-block {
+    background-color: #297eca;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.count-block .text-container{
+    width: 75%;
+    display: inline-block;
+}
+
+.count-block .text-container textarea{
+    width: 100%;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+.count-block .word-count {
+    width: 24%;
+    float: left;
+    color: white;
+}
+
+.headline {
+    font-size: 6em;
+    line-height: 1.2;
+    text-overflow: '-';
+    letter-spacing: -1px;
+    margin: 20px 0 10px 0;
+    padding: 0 0 12px 0;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    text-align: center;
+}
+
+.padding {
+    padding: 10px;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+    font-size: 14px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-style: italic;
+    font-size: 14px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-style: italic;
+    font-size: 14px;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.plus-minus {
+    background: transparent;
+    border: none;
+    color: #297eca;
+    padding: 0 8px 0 8px;
+    font-size: 14px;
+}
+
+.right-align {
+    display: block;
+    margin: 0 0 10px auto;
+}
