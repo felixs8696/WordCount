@@ -60,10 +60,10 @@ function createFile() {
 // var recentElemID = "textbox" + tfCount;
 
 var code =  '<div class = "col-lg-9" style="text-align:left;">' +
-				'<textarea rows = "1" cols = "115" name="prompts" style="margin: 0px 0px 0px 20px;" placeholder="Prompt"></textarea>' +
+				'<textarea rows = "1" cols = "100" name="prompts" style="margin: 0px 0px 0px 20px;" placeholder="Prompt"></textarea>' +
 			'</div>' +
 			'<div class = "col-lg-9" style="text-align:left;">' +
-				'<textarea rows = "10" cols = "115" name="textFields" style="margin: 20px;" placeholder="Enter Response Here..."></textarea>' +
+				'<textarea rows = "10" cols = "100" name="textFields" style="margin: 20px;" placeholder="Enter Response Here..."></textarea>' +
 			'</div>' +
 			'<div class = "col-lg-2">' +
 			'<div id= "entry">' +
